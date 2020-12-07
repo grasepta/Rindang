@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "snake-plant-care-overview-1902772-04-76c211bb8d1b461e8af30a68b6169535.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

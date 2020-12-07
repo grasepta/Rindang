@@ -7,19 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B70AC8ED24DB1DE600D90D94 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70AC8EC24DB1DE600D90D94 /* ExploreViewController.swift */; };
+		B70E436C2579D24B005B63C5 /* ListPlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70E436A2579D24B005B63C5 /* ListPlantTableViewCell.swift */; };
+		B70E436D2579D24B005B63C5 /* ListPlantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70E436B2579D24B005B63C5 /* ListPlantTableViewCell.xib */; };
+		B70F4C3B257DD4AB00FCA5B5 /* GardenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F4C3A257DD4AB00FCA5B5 /* GardenViewController.swift */; };
+		B71013EC24DC8859002450EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F6FBE924C330430020580C /* Assets.xcassets */; };
+		B7AAC01D24F9FC6900621679 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AAC01B24F9FC6900621679 /* PlantTableViewCell.swift */; };
+		B7AAC01E24F9FC6900621679 /* PlantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7AAC01C24F9FC6900621679 /* PlantTableViewCell.xib */; };
+		B7AAC02124F9FEB300621679 /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AAC01F24F9FEB300621679 /* TipTableViewCell.swift */; };
+		B7AAC02224F9FEB300621679 /* TipTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7AAC02024F9FEB300621679 /* TipTableViewCell.xib */; };
+		B7AAC02424FA051400621679 /* plantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AAC02324FA051400621679 /* plantModel.swift */; };
+		B7D14317256562E900BE1603 /* ARSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D14316256562E900BE1603 /* ARSceneViewController.swift */; };
+		B7D143202565784800BE1603 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D1431F2565784800BE1603 /* SearchViewController.swift */; };
 		B7F6FBE124C3303F0020580C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6FBE024C3303F0020580C /* AppDelegate.swift */; };
 		B7F6FBE324C3303F0020580C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6FBE224C3303F0020580C /* SceneDelegate.swift */; };
-		B7F6FBE524C3303F0020580C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6FBE424C3303F0020580C /* ViewController.swift */; };
+		B7F6FBE524C3303F0020580C /* WizardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6FBE424C3303F0020580C /* WizardViewController.swift */; };
 		B7F6FBE824C3303F0020580C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F6FBE624C3303F0020580C /* Main.storyboard */; };
-		B7F6FBEA24C330430020580C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F6FBE924C330430020580C /* Assets.xcassets */; };
 		B7F6FBED24C330430020580C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7F6FBEB24C330430020580C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B70AC8EC24DB1DE600D90D94 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		B70E436A2579D24B005B63C5 /* ListPlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlantTableViewCell.swift; sourceTree = "<group>"; };
+		B70E436B2579D24B005B63C5 /* ListPlantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlantTableViewCell.xib; sourceTree = "<group>"; };
+		B70F4C3A257DD4AB00FCA5B5 /* GardenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenViewController.swift; sourceTree = "<group>"; };
+		B7AAC01B24F9FC6900621679 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
+		B7AAC01C24F9FC6900621679 /* PlantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantTableViewCell.xib; sourceTree = "<group>"; };
+		B7AAC01F24F9FEB300621679 /* TipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
+		B7AAC02024F9FEB300621679 /* TipTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipTableViewCell.xib; sourceTree = "<group>"; };
+		B7AAC02324FA051400621679 /* plantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plantModel.swift; sourceTree = "<group>"; };
+		B7D14316256562E900BE1603 /* ARSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSceneViewController.swift; sourceTree = "<group>"; };
+		B7D1431F2565784800BE1603 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		B7F6FBDD24C3303E0020580C /* Rindang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rindang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F6FBE024C3303F0020580C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F6FBE224C3303F0020580C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B7F6FBE424C3303F0020580C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B7F6FBE424C3303F0020580C /* WizardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WizardViewController.swift; sourceTree = "<group>"; };
 		B7F6FBE724C3303F0020580C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7F6FBE924C330430020580C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F6FBEC24C330430020580C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +59,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B70AC8E524DB189D00D90D94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B7AAC02324FA051400621679 /* plantModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B70AC8E624DB18A400D90D94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B7F6FBE624C3303F0020580C /* Main.storyboard */,
+				B7AAC01B24F9FC6900621679 /* PlantTableViewCell.swift */,
+				B7AAC01C24F9FC6900621679 /* PlantTableViewCell.xib */,
+				B7AAC01F24F9FEB300621679 /* TipTableViewCell.swift */,
+				B7AAC02024F9FEB300621679 /* TipTableViewCell.xib */,
+				B70E436A2579D24B005B63C5 /* ListPlantTableViewCell.swift */,
+				B70E436B2579D24B005B63C5 /* ListPlantTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B70AC8E724DB18B300D90D94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7F6FBE424C3303F0020580C /* WizardViewController.swift */,
+				B70AC8EC24DB1DE600D90D94 /* ExploreViewController.swift */,
+				B7D14316256562E900BE1603 /* ARSceneViewController.swift */,
+				B7D1431F2565784800BE1603 /* SearchViewController.swift */,
+				B70F4C3A257DD4AB00FCA5B5 /* GardenViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		B7F6FBD424C3303E0020580C = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +112,11 @@
 		B7F6FBDF24C3303F0020580C /* Rindang */ = {
 			isa = PBXGroup;
 			children = (
+				B70AC8E724DB18B300D90D94 /* Controller */,
+				B70AC8E624DB18A400D90D94 /* View */,
+				B70AC8E524DB189D00D90D94 /* Model */,
 				B7F6FBE024C3303F0020580C /* AppDelegate.swift */,
 				B7F6FBE224C3303F0020580C /* SceneDelegate.swift */,
-				B7F6FBE424C3303F0020580C /* ViewController.swift */,
-				B7F6FBE624C3303F0020580C /* Main.storyboard */,
 				B7F6FBE924C330430020580C /* Assets.xcassets */,
 				B7F6FBEB24C330430020580C /* LaunchScreen.storyboard */,
 				B7F6FBEE24C330430020580C /* Info.plist */,
@@ -125,9 +182,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71013EC24DC8859002450EC /* Assets.xcassets in Resources */,
+				B7AAC02224F9FEB300621679 /* TipTableViewCell.xib in Resources */,
+				B7AAC01E24F9FC6900621679 /* PlantTableViewCell.xib in Resources */,
 				B7F6FBED24C330430020580C /* LaunchScreen.storyboard in Resources */,
-				B7F6FBEA24C330430020580C /* Assets.xcassets in Resources */,
 				B7F6FBE824C3303F0020580C /* Main.storyboard in Resources */,
+				B70E436D2579D24B005B63C5 /* ListPlantTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7F6FBE524C3303F0020580C /* ViewController.swift in Sources */,
+				B7AAC02124F9FEB300621679 /* TipTableViewCell.swift in Sources */,
+				B70AC8ED24DB1DE600D90D94 /* ExploreViewController.swift in Sources */,
+				B7AAC01D24F9FC6900621679 /* PlantTableViewCell.swift in Sources */,
+				B7D143202565784800BE1603 /* SearchViewController.swift in Sources */,
+				B7F6FBE524C3303F0020580C /* WizardViewController.swift in Sources */,
 				B7F6FBE124C3303F0020580C /* AppDelegate.swift in Sources */,
 				B7F6FBE324C3303F0020580C /* SceneDelegate.swift in Sources */,
+				B7D14317256562E900BE1603 /* ARSceneViewController.swift in Sources */,
+				B70F4C3B257DD4AB00FCA5B5 /* GardenViewController.swift in Sources */,
+				B7AAC02424FA051400621679 /* plantModel.swift in Sources */,
+				B70E436C2579D24B005B63C5 /* ListPlantTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

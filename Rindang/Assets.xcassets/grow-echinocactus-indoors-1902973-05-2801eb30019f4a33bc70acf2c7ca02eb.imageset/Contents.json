@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "grow-echinocactus-indoors-1902973-05-2801eb30019f4a33bc70acf2c7ca02eb.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
