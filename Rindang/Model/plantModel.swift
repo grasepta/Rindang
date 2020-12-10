@@ -54,4 +54,6 @@ class tumbuhan {
     var selectedPlant: Plant = Plant(name: "", sub: "", gambar: #imageLiteral(resourceName: "snake-plant-care-overview-1902772-04-76c211bb8d1b461e8af30a68b6169535"), deskripsi: "", instruksi: "", cahaya: "", air: "", masalah: "")
     var listTumbuhanTemp:[Plant] = []
     var listKebun:[Plant] = []
+    var listStored:[String] = []
+    
 }

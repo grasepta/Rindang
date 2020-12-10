@@ -52,6 +52,8 @@ class PlantDetailViewController: UIViewController {
                 tumbuhan.sharedInstance.selectedPlant.status = true
                 tumbuhan.sharedInstance.listKebun.append(tumbuhan.sharedInstance.selectedPlant)
                 tumbuhan.sharedInstance.plantStock[tempIntStock].status = true
+                //tumbuhan.sharedInstance.listStored.append(tumbuhan.sharedInstance.plantStock[tempIntStock].name)
+                self.storePlant()
             }
         }else{
             let alert = UIAlertController(title: "Hapus", message: "Anda menonaktifkan pemberitahuan", preferredStyle: UIAlertController.Style.alert)
@@ -60,9 +62,19 @@ class PlantDetailViewController: UIViewController {
                 tumbuhan.sharedInstance.selectedPlant.status = false
                 tumbuhan.sharedInstance.plantStock[tempIntStock].status = false
                 tumbuhan.sharedInstance.listKebun.remove(at: tempIntGarden)
+               // tumbuhan.sharedInstance.listStored.remove(at: tempIntGarden)
+                self.storePlant()
                 self.navigationController?.popViewController(animated: true)
             }))
             self.present(alert, animated: true, completion: nil)
         }
+    }
+    
+    func storePlant(){
+        var tempArray:[String] = []
+        for i in tumbuhan.sharedInstance.listKebun {
+            tempArray.append(i.name)
+        }
+        UserDefaults.standard.setValue(tempArray, forKey: "storedPlant")
     }
 }
