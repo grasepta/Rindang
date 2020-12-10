@@ -14,6 +14,7 @@ class ExploreViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
@@ -58,6 +59,8 @@ extension ExploreViewController:UITableViewDelegate, UITableViewDataSource{
         }
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: false)
         if indexPath.row == 0{
             let vc = (storyboard?.instantiateViewController(withIdentifier: "2"))! as UIViewController
             self.navigationController?.pushViewController(vc, animated: true)
@@ -66,6 +69,7 @@ extension ExploreViewController:UITableViewDelegate, UITableViewDataSource{
             self.navigationController?.pushViewController(vc, animated: true)
             
         }
+        
         
         
     }

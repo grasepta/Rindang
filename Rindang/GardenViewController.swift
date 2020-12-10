@@ -18,6 +18,9 @@ class GardenViewController: UIViewController {
         commonInit()
 
     }
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
     
     func commonInit() {
         setupTableView()
@@ -34,15 +37,24 @@ class GardenViewController: UIViewController {
 
 extension GardenViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return tumbuhan.sharedInstance.listKebun.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "plantListCell") as! ListPlantTableViewCell
         cell.imagePlant.layer.cornerRadius = cell.imagePlant.frame.size.height/4
-        cell.imagePlant.image = tumbuhan.sharedInstance.plant[indexPath.row].gambar
-        cell.labelTittle.text = tumbuhan.sharedInstance.plant[indexPath.row].name
-        cell.labelSub.text = tumbuhan.sharedInstance.plant[indexPath.row].sub
+        cell.imagePlant.image = tumbuhan.sharedInstance.listKebun[indexPath.row].gambar
+        cell.labelTittle.text = tumbuhan.sharedInstance.listKebun[indexPath.row].name
+        cell.labelSub.text = tumbuhan.sharedInstance.listKebun[indexPath.row].sub
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tumbuhan.sharedInstance.selectedPlant = tumbuhan.sharedInstance.listKebun[indexPath.row]
+       
+        let vc = (storyboard?.instantiateViewController(withIdentifier: "1"))! as UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        
     }
 }

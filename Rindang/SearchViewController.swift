@@ -49,19 +49,37 @@ extension SearchViewController:UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tumbuhan.sharedInstance.selectedPlant = tumbuhan.sharedInstance.plant[indexPath.row]
+       
+        let vc = (storyboard?.instantiateViewController(withIdentifier: "1"))! as UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "plantListCell") as! ListPlantTableViewCell
+//        if tumbuhan.sharedInstance.plant.count > 1 {
+//            if indexPath.row == 0 {
+//                let vc = (storyboard?.instantiateViewController(withIdentifier: "1"))! as UIViewController
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            } else if indexPath.row == 1{
+//                let vc = (storyboard?.instantiateViewController(withIdentifier: "2"))! as UIViewController
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            } else if indexPath.row == 2{
+//                let vc = (storyboard?.instantiateViewController(withIdentifier: "3"))! as UIViewController
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            }
+//        }else{
+//            if tumbuhan.sharedInstance.plant[0].name == tumbuhan.sharedInstance.plantStock[0].name {
+//                let vc = (storyboard?.instantiateViewController(withIdentifier: "1"))! as UIViewController
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            }else if tumbuhan.sharedInstance.plant[0].name == tumbuhan.sharedInstance.plantStock[1].name {
+//                let vc = (storyboard?.instantiateViewController(withIdentifier: "2"))! as UIViewController
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            }else if tumbuhan.sharedInstance.plant[0].name == tumbuhan.sharedInstance.plantStock[2].name {
+//                let vc = (storyboard?.instantiateViewController(withIdentifier: "3"))! as UIViewController
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            }
+//        }
         
-        if cell.textLabel?.text == tumbuhan.sharedInstance.plantStock[0].name{
-            let vc = (storyboard?.instantiateViewController(withIdentifier: "1"))! as UIViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-        }else if cell.textLabel?.text == tumbuhan.sharedInstance.plantStock[1].name{
-            let vc = (storyboard?.instantiateViewController(withIdentifier: "2"))! as UIViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-        }else if cell.textLabel?.text == tumbuhan.sharedInstance.plantStock[2].name{
-            let vc = (storyboard?.instantiateViewController(withIdentifier: "3"))! as UIViewController
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+        
+        
     }
     
 }
