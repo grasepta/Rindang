@@ -8,6 +8,7 @@
 
 import UIKit
 import ARKit
+import ImageIO
 
 class ARSceneViewController: UIViewController {
     
@@ -45,19 +46,40 @@ class ARSceneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIScreen.main.brightness = brightTemp
         nextButton.layer.cornerRadius = nextButton.frame.height/2
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         UIScreen.main.wantsSoftwareDimming = true
-        let bright = sceneView.session.currentFrame?.camera.exposureOffset
-        let alert = UIAlertController(title: "Intensitas Cahaya", message: "Intensitas : \(String(describing: self.lightNodes[0].light?.intensity)) brigth : \(bright)", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "Search") as! SearchViewController
-//        navigationController?.pushViewController(vc, animated: true)
+        let brightnessScreen = Float(UIScreen.main.brightness) - 0.4
+        let bright = (brightnessScreen)
+        print(bright)
+        if Float(bright)<0.1 {
+            let alert = UIAlertController(title: "Intensitas cahaya kurang", message: "Coba lagi ditempat yang lebih terang", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true){
+                self.navigationController?.popViewController(animated: true)
+            }
+        } else if Float(bright)<0.3 {
+            tumbuhan.sharedInstance.listTumbuhanTemp = []
+            tumbuhan.sharedInstance.listTumbuhanTemp.append(tumbuhan.sharedInstance.plantStock[0])
+            tumbuhan.sharedInstance.plant = tumbuhan.sharedInstance.listTumbuhanTemp
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Search") as! SearchViewController
+            navigationController?.pushViewController(vc, animated: true)
+        } else if Float(bright)<0.5 {
+            tumbuhan.sharedInstance.listTumbuhanTemp = []
+            tumbuhan.sharedInstance.listTumbuhanTemp.append(tumbuhan.sharedInstance.plantStock[2])
+            tumbuhan.sharedInstance.plant = tumbuhan.sharedInstance.listTumbuhanTemp
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Search") as! SearchViewController
+            navigationController?.pushViewController(vc, animated: true)
+        } else {
+            tumbuhan.sharedInstance.listTumbuhanTemp = []
+            tumbuhan.sharedInstance.listTumbuhanTemp.append(tumbuhan.sharedInstance.plantStock[1])
+            tumbuhan.sharedInstance.plant = tumbuhan.sharedInstance.listTumbuhanTemp
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Search") as! SearchViewController
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func setUpSceneView() {

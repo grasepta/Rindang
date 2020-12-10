@@ -11,6 +11,7 @@
 		B70E436C2579D24B005B63C5 /* ListPlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70E436A2579D24B005B63C5 /* ListPlantTableViewCell.swift */; };
 		B70E436D2579D24B005B63C5 /* ListPlantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70E436B2579D24B005B63C5 /* ListPlantTableViewCell.xib */; };
 		B70F4C3B257DD4AB00FCA5B5 /* GardenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F4C3A257DD4AB00FCA5B5 /* GardenViewController.swift */; };
+		B70F4C3E257DE91900FCA5B5 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70F4C3D257DE91900FCA5B5 /* ArticleViewController.swift */; };
 		B71013EC24DC8859002450EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F6FBE924C330430020580C /* Assets.xcassets */; };
 		B7AAC01D24F9FC6900621679 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AAC01B24F9FC6900621679 /* PlantTableViewCell.swift */; };
 		B7AAC01E24F9FC6900621679 /* PlantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7AAC01C24F9FC6900621679 /* PlantTableViewCell.xib */; };
@@ -31,6 +32,7 @@
 		B70E436A2579D24B005B63C5 /* ListPlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlantTableViewCell.swift; sourceTree = "<group>"; };
 		B70E436B2579D24B005B63C5 /* ListPlantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListPlantTableViewCell.xib; sourceTree = "<group>"; };
 		B70F4C3A257DD4AB00FCA5B5 /* GardenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GardenViewController.swift; sourceTree = "<group>"; };
+		B70F4C3D257DE91900FCA5B5 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		B7AAC01B24F9FC6900621679 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
 		B7AAC01C24F9FC6900621679 /* PlantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantTableViewCell.xib; sourceTree = "<group>"; };
 		B7AAC01F24F9FEB300621679 /* TipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				B7D14316256562E900BE1603 /* ARSceneViewController.swift */,
 				B7D1431F2565784800BE1603 /* SearchViewController.swift */,
 				B70F4C3A257DD4AB00FCA5B5 /* GardenViewController.swift */,
+				B70F4C3D257DE91900FCA5B5 /* ArticleViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7AAC02124F9FEB300621679 /* TipTableViewCell.swift in Sources */,
+				B70F4C3E257DE91900FCA5B5 /* ArticleViewController.swift in Sources */,
 				B70AC8ED24DB1DE600D90D94 /* ExploreViewController.swift in Sources */,
 				B7AAC01D24F9FC6900621679 /* PlantTableViewCell.swift in Sources */,
 				B7D143202565784800BE1603 /* SearchViewController.swift in Sources */,

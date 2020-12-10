@@ -40,9 +40,9 @@ extension GardenViewController:UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "plantListCell") as! ListPlantTableViewCell
         cell.imagePlant.layer.cornerRadius = cell.imagePlant.frame.size.height/4
-        cell.imagePlant.image = tumbuhan.sharedInstance.listGambar[indexPath.row]
-        cell.labelTittle.text = tumbuhan.sharedInstance.listTumbuhan[indexPath.row]
-        cell.labelSub.text = tumbuhan.sharedInstance.listSub[indexPath.row]
+        cell.imagePlant.image = tumbuhan.sharedInstance.plant[indexPath.row].gambar
+        cell.labelTittle.text = tumbuhan.sharedInstance.plant[indexPath.row].name
+        cell.labelSub.text = tumbuhan.sharedInstance.plant[indexPath.row].sub
         return cell
     }
 }

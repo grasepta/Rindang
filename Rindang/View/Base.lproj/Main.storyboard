@@ -167,9 +167,9 @@ pada permukaan yang rata</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cim-V9-w0f">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cim-V9-w0f">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.98823529409999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yJc-Qb-9EI"/>
@@ -364,12 +364,12 @@ pada permukaan yang rata</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLR-Gd-j2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854" y="1567"/>
+            <point key="canvasLocation" x="4417" y="3065"/>
         </scene>
-        <!--View Controller-->
+        <!--Article View Controller-->
         <scene sceneID="sdx-PI-bOD">
             <objects>
-                <viewController id="XVu-2d-oUm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="01" id="XVu-2d-oUm" customClass="ArticleViewController" customModule="Rindang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9N7-KU-TAW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -392,7 +392,7 @@ pada permukaan yang rata</string>
                                     <constraint firstAttribute="width" secondItem="TBR-jy-huz" secondAttribute="height" multiplier="374:200" id="H1T-sd-vHC"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wUl-KE-B2I">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wUl-KE-B2I">
                                 <rect key="frame" x="20" y="352" width="374" height="510"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.98823529409999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <string key="text">Cahaya merupakan faktor penting terhadap berlangsungnya fotosintesis, sementara fotosintesis merupakan proses yang menjadi kunci dapat berlangsungnya proses metabolisme yang lain di dalam tanaman. 
@@ -515,21 +515,24 @@ Beberapa tanaman yang menjadi favorit banyak pemula adalah tanaman hias succulen
         <!--Kebun-->
         <scene sceneID="P6Y-36-CBt">
             <objects>
-                <viewController id="l9M-Fu-Uix" sceneMemberID="viewController">
+                <viewController id="l9M-Fu-Uix" customClass="GardenViewController" customModule="Rindang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eh9-xS-415">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="unD-4v-NUG">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="unD-4v-NUG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.98823529409999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ksr-PN-ibq"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.98431372549999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Kebun" id="gLj-Qr-9Pd"/>
+                    <connections>
+                        <outlet property="tableView" destination="unD-4v-NUG" id="vHL-dV-z6V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qQ-BX-cW5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -686,7 +689,163 @@ Beberapa tanaman yang menjadi favorit banyak pemula adalah tanaman hias succulen
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FKf-D1-zZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854" y="2321"/>
+            <point key="canvasLocation" x="3693" y="3065"/>
+        </scene>
+        <!--Echinocactus grusonii-->
+        <scene sceneID="4ix-yU-yMi">
+            <objects>
+                <viewController storyboardIdentifier="2" title="Echinocactus grusonii" id="o5u-IX-a5i" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="78V-Jx-0eI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFP-Xn-kXt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="922"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTC-o0-vga">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deskripsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lc5-1W-Aij">
+                                                <rect key="frame" x="20" y="422" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn0-N8-XIc">
+                                                <rect key="frame" x="20" y="451" width="374" height="72"/>
+                                                <string key="text">Kaktus barel adalah nama lain dari tanaman ini. Seperti namanya, hampir bulat sempurna saat masih muda, jadi tanaman ini bisa menjadi tanaman display yang sangat bagus. tanaman ini sangat menarik, dengan baris atau duri yang berjarak sama di lobus yang sangat bergaris. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instruksi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpe-41-bDD">
+                                                <rect key="frame" x="20" y="538" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne0-QY-XBL">
+                                                <rect key="frame" x="20" y="567" width="374" height="57.5"/>
+                                                <string key="text">Tanaman gurun seperti ini tidak dapat menangani genangan air saat tumbuh. Tanam di tanah dengan drainase yang sangat baik atau campuran pot. Saat ditanam di dalam ruangan, tanaman ini akan membutuhkan lokasi paling terang dan paling cerah.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-5J-6dw">
+                                                <rect key="frame" x="20" y="634.5" width="374" height="57"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cahaya Tinggi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vw-5A-VA2">
+                                                        <rect key="frame" x="20" y="44" width="80" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensistas Cahaya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wld-yT-qbW">
+                                                        <rect key="frame" x="0.0" y="8" width="119.5" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penyiraman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBW-eF-6ZI">
+                                                        <rect key="frame" x="269" y="8" width="75" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disiram tiap bulan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZm-zk-3vt">
+                                                        <rect key="frame" x="255.5" y="44" width="102" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.96470588239999999" green="0.98823529409999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="kBW-eF-6ZI" firstAttribute="top" secondItem="kdd-5J-6dw" secondAttribute="top" constant="8" id="EUr-XX-FRP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kBW-eF-6ZI" secondAttribute="trailing" constant="30" id="RFV-1E-Av9"/>
+                                                    <constraint firstItem="wld-yT-qbW" firstAttribute="top" secondItem="kdd-5J-6dw" secondAttribute="top" constant="8" id="UhV-AT-wHO"/>
+                                                    <constraint firstItem="xZm-zk-3vt" firstAttribute="centerX" secondItem="kBW-eF-6ZI" secondAttribute="centerX" id="VZF-vk-RVP"/>
+                                                    <constraint firstItem="wld-yT-qbW" firstAttribute="leading" secondItem="kdd-5J-6dw" secondAttribute="leading" id="bDK-hw-0m8"/>
+                                                    <constraint firstItem="7vw-5A-VA2" firstAttribute="centerX" secondItem="wld-yT-qbW" secondAttribute="centerX" id="iwk-Zb-oId"/>
+                                                    <constraint firstItem="7vw-5A-VA2" firstAttribute="top" secondItem="wld-yT-qbW" secondAttribute="bottom" constant="20" id="sYg-hc-Csy"/>
+                                                    <constraint firstItem="xZm-zk-3vt" firstAttribute="top" secondItem="kBW-eF-6ZI" secondAttribute="bottom" constant="20" id="zrs-fO-gAV"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masalah umum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMm-pl-lBH">
+                                                <rect key="frame" x="20" y="699.5" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW7-ho-Iwp">
+                                                <rect key="frame" x="20" y="728.5" width="374" height="43"/>
+                                                <string key="text">Masalah pada tanaman ini jarang terjadi, tetapi kadang-kadang mungkin penuh dengan kutu putih. Menyemprot dengan air, kemudian melapisi dengan sabun insektisida adalah obat terbaik.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grow-echinocactus-indoors-1902973-05-2801eb30019f4a33bc70acf2c7ca02eb" translatesAutoresizingMaskIntoConstraints="NO" id="vzA-cR-Zzb">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="vzA-cR-Zzb" secondAttribute="height" id="5vn-Z6-9HA"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.98823529409999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="xMm-pl-lBH" firstAttribute="leading" secondItem="jTC-o0-vga" secondAttribute="leading" constant="20" id="0vY-cA-dbt"/>
+                                            <constraint firstAttribute="trailing" secondItem="lc5-1W-Aij" secondAttribute="trailing" constant="20" id="6El-Nm-ITm"/>
+                                            <constraint firstItem="lc5-1W-Aij" firstAttribute="leading" secondItem="jTC-o0-vga" secondAttribute="leading" constant="20" id="8dx-Bf-q0a"/>
+                                            <constraint firstItem="vzA-cR-Zzb" firstAttribute="width" secondItem="vzA-cR-Zzb" secondAttribute="height" id="9Jf-4g-zP4"/>
+                                            <constraint firstItem="gW7-ho-Iwp" firstAttribute="top" secondItem="xMm-pl-lBH" secondAttribute="bottom" constant="8" symbolic="YES" id="D6i-W2-yPS"/>
+                                            <constraint firstItem="wpe-41-bDD" firstAttribute="top" secondItem="mn0-N8-XIc" secondAttribute="bottom" constant="15" id="Jem-4V-Nvd"/>
+                                            <constraint firstItem="xMm-pl-lBH" firstAttribute="top" secondItem="kdd-5J-6dw" secondAttribute="bottom" constant="8" symbolic="YES" id="MQN-dJ-ukl"/>
+                                            <constraint firstItem="lc5-1W-Aij" firstAttribute="top" secondItem="vzA-cR-Zzb" secondAttribute="bottom" constant="8" symbolic="YES" id="MR2-Du-FXB"/>
+                                            <constraint firstItem="Ne0-QY-XBL" firstAttribute="top" secondItem="wpe-41-bDD" secondAttribute="bottom" constant="8" symbolic="YES" id="OBE-gY-Ao1"/>
+                                            <constraint firstAttribute="trailing" secondItem="wpe-41-bDD" secondAttribute="trailing" constant="20" id="R7X-LV-NwX"/>
+                                            <constraint firstItem="gW7-ho-Iwp" firstAttribute="leading" secondItem="jTC-o0-vga" secondAttribute="leading" constant="20" id="RKy-Vw-bxU"/>
+                                            <constraint firstItem="mn0-N8-XIc" firstAttribute="top" secondItem="lc5-1W-Aij" secondAttribute="bottom" constant="8" symbolic="YES" id="S35-wH-xcI"/>
+                                            <constraint firstItem="wpe-41-bDD" firstAttribute="leading" secondItem="jTC-o0-vga" secondAttribute="leading" constant="20" id="SmE-ZQ-GnH"/>
+                                            <constraint firstItem="kdd-5J-6dw" firstAttribute="top" secondItem="Ne0-QY-XBL" secondAttribute="bottom" constant="10" id="UZU-kX-ibY"/>
+                                            <constraint firstAttribute="trailing" secondItem="xMm-pl-lBH" secondAttribute="trailing" constant="20" id="WX4-ry-lsy"/>
+                                            <constraint firstAttribute="trailing" secondItem="vzA-cR-Zzb" secondAttribute="trailing" id="Zfr-TI-903"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ne0-QY-XBL" secondAttribute="trailing" constant="20" id="b3s-1h-6J0"/>
+                                            <constraint firstAttribute="trailing" secondItem="gW7-ho-Iwp" secondAttribute="trailing" constant="20" id="gG6-j0-6JS"/>
+                                            <constraint firstAttribute="trailing" secondItem="mn0-N8-XIc" secondAttribute="trailing" constant="20" id="i2C-ZG-oEd"/>
+                                            <constraint firstItem="vzA-cR-Zzb" firstAttribute="top" secondItem="jTC-o0-vga" secondAttribute="top" id="iLL-xY-lGN"/>
+                                            <constraint firstItem="kdd-5J-6dw" firstAttribute="height" secondItem="jTC-o0-vga" secondAttribute="height" multiplier="0.0715" id="ldS-mI-syU"/>
+                                            <constraint firstAttribute="trailing" secondItem="kdd-5J-6dw" secondAttribute="trailing" constant="20" id="lpS-on-NGU"/>
+                                            <constraint firstItem="mn0-N8-XIc" firstAttribute="leading" secondItem="jTC-o0-vga" secondAttribute="leading" constant="20" id="wcR-at-cMO"/>
+                                            <constraint firstItem="Ne0-QY-XBL" firstAttribute="leading" secondItem="jTC-o0-vga" secondAttribute="leading" constant="20" id="x0I-Hc-K5A"/>
+                                            <constraint firstAttribute="height" constant="800" id="y69-Ds-xI9"/>
+                                            <constraint firstItem="vzA-cR-Zzb" firstAttribute="leading" secondItem="jTC-o0-vga" secondAttribute="leading" id="yId-nk-k2A"/>
+                                            <constraint firstItem="kdd-5J-6dw" firstAttribute="leading" secondItem="jTC-o0-vga" secondAttribute="leading" constant="20" id="za8-5J-rf1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jTC-o0-vga" secondAttribute="trailing" id="7YH-Wf-YfC"/>
+                                    <constraint firstItem="jTC-o0-vga" firstAttribute="leading" secondItem="zFP-Xn-kXt" secondAttribute="leading" id="AyQ-pY-QD9"/>
+                                    <constraint firstAttribute="bottom" secondItem="jTC-o0-vga" secondAttribute="bottom" id="DTe-vN-NLb"/>
+                                    <constraint firstItem="jTC-o0-vga" firstAttribute="top" secondItem="zFP-Xn-kXt" secondAttribute="top" id="oG3-sA-i9I"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2FJ-Oe-RgT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zFP-Xn-kXt" firstAttribute="top" secondItem="2FJ-Oe-RgT" secondAttribute="top" id="9Os-aB-16F"/>
+                            <constraint firstItem="2FJ-Oe-RgT" firstAttribute="bottom" secondItem="zFP-Xn-kXt" secondAttribute="bottom" id="AlM-wb-aDi"/>
+                            <constraint firstItem="jTC-o0-vga" firstAttribute="width" secondItem="78V-Jx-0eI" secondAttribute="width" id="IBX-yc-KTb"/>
+                            <constraint firstItem="zFP-Xn-kXt" firstAttribute="leading" secondItem="2FJ-Oe-RgT" secondAttribute="leading" id="Iq5-zn-nx5"/>
+                            <constraint firstItem="2FJ-Oe-RgT" firstAttribute="trailing" secondItem="zFP-Xn-kXt" secondAttribute="trailing" id="dLn-Iu-e3p"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4cm-nw-n1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4417" y="2355"/>
         </scene>
         <!--Aloe Vera-->
         <scene sceneID="fyc-aM-Yju">
@@ -815,7 +974,319 @@ Beberapa tanaman yang menjadi favorit banyak pemula adalah tanaman hias succulen
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gxd-PG-E7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2854" y="3054"/>
+            <point key="canvasLocation" x="5130" y="3065"/>
+        </scene>
+        <!--Sansevieria trifasciata-->
+        <scene sceneID="gGT-iL-lmn">
+            <objects>
+                <viewController storyboardIdentifier="1" title="Sansevieria trifasciata" id="PgU-WF-72I" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="boc-uk-6fO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zG0-bF-bvN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="922"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gxb-O4-JGm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="850"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deskripsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sca-D6-hKv">
+                                                <rect key="frame" x="20" y="422" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Iz-ui-nki">
+                                                <rect key="frame" x="20" y="451" width="374" height="72"/>
+                                                <string key="text">Sansevieria trifasciata (Lidah Mertua) adalah salah satu spesies tanaman hias yang paling populer. Dengan daun kaku yang berkisar dari enam inci hingga delapan kaki tinggi, tergantung pada varietasnya. Tanaman Lidah Mertua biasanya memiliki batas kuning.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instruksi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEu-kA-iRt">
+                                                <rect key="frame" x="20" y="538" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPh-qd-sak">
+                                                <rect key="frame" x="20" y="567" width="374" height="57.5"/>
+                                                <string key="text">Sansevieria mudah tumbuh. mereka akan tumbuh subur di sudut-sudut rumah yang sangat terang atau hampir gelap. Tanaman hias yang ideal, dan akan tumbuh dengan baik di lantai atau di layar meja. Tanaman ini juga tahan kekeringan.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Zq-31-xTu">
+                                                <rect key="frame" x="20" y="634.5" width="374" height="61"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cahaya Rendah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vF-Kk-kUe">
+                                                        <rect key="frame" x="16" y="44" width="88" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensistas Cahaya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJC-pd-ZgO">
+                                                        <rect key="frame" x="0.0" y="8" width="119.5" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penyiraman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-5R-beL">
+                                                        <rect key="frame" x="269" y="8" width="75" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disiram tiap bulan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aD2-06-9jd">
+                                                        <rect key="frame" x="255.5" y="44" width="102" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.96470588239999999" green="0.98823529409999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="rJC-pd-ZgO" firstAttribute="top" secondItem="3Zq-31-xTu" secondAttribute="top" constant="8" id="NMx-f3-Er1"/>
+                                                    <constraint firstItem="1vF-Kk-kUe" firstAttribute="top" secondItem="rJC-pd-ZgO" secondAttribute="bottom" constant="20" id="Xsn-Jp-wFu"/>
+                                                    <constraint firstItem="aD2-06-9jd" firstAttribute="centerX" secondItem="4dh-5R-beL" secondAttribute="centerX" id="ZaS-2X-I3F"/>
+                                                    <constraint firstItem="4dh-5R-beL" firstAttribute="top" secondItem="3Zq-31-xTu" secondAttribute="top" constant="8" id="bW3-j4-0eM"/>
+                                                    <constraint firstItem="aD2-06-9jd" firstAttribute="top" secondItem="4dh-5R-beL" secondAttribute="bottom" constant="20" id="pn4-6t-43Y"/>
+                                                    <constraint firstItem="1vF-Kk-kUe" firstAttribute="centerX" secondItem="rJC-pd-ZgO" secondAttribute="centerX" id="sJE-Pu-yk8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="4dh-5R-beL" secondAttribute="trailing" constant="30" id="wou-i9-YEC"/>
+                                                    <constraint firstItem="rJC-pd-ZgO" firstAttribute="leading" secondItem="3Zq-31-xTu" secondAttribute="leading" id="zxL-VM-2aQ"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masalah umum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRE-1i-pH0">
+                                                <rect key="frame" x="20" y="703.5" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekc-m1-xxK">
+                                                <rect key="frame" x="20" y="732.5" width="374" height="72"/>
+                                                <string key="text">Tanaman ini cukup beracun bagi manusia, anjing, dan kucing. Jika mereka menelan tanaman itu, manusia mungkin menderita gejala jangka pendek termasuk sakit mulut, air liur, dan mual. Dalam kasus yang jarang terjadi, dapat menghasilkan reaksi dermatologis tetapi terutama beracun hanya jika tertelan</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snake-plant-care-overview-1902772-04-76c211bb8d1b461e8af30a68b6169535" translatesAutoresizingMaskIntoConstraints="NO" id="LIa-k3-evy">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="LIa-k3-evy" secondAttribute="height" id="hZ5-6P-9NQ"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.98823529409999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="vRE-1i-pH0" secondAttribute="trailing" constant="20" id="33J-h1-QLJ"/>
+                                            <constraint firstItem="JEu-kA-iRt" firstAttribute="top" secondItem="7Iz-ui-nki" secondAttribute="bottom" constant="15" id="3Nr-xn-wAl"/>
+                                            <constraint firstItem="JEu-kA-iRt" firstAttribute="leading" secondItem="Gxb-O4-JGm" secondAttribute="leading" constant="20" id="7VW-xd-yQt"/>
+                                            <constraint firstItem="7Iz-ui-nki" firstAttribute="top" secondItem="sca-D6-hKv" secondAttribute="bottom" constant="8" symbolic="YES" id="7wn-OZ-gUR"/>
+                                            <constraint firstItem="uPh-qd-sak" firstAttribute="leading" secondItem="Gxb-O4-JGm" secondAttribute="leading" constant="20" id="9av-LU-pGK"/>
+                                            <constraint firstAttribute="trailing" secondItem="JEu-kA-iRt" secondAttribute="trailing" constant="20" id="Bxp-hz-NBN"/>
+                                            <constraint firstItem="LIa-k3-evy" firstAttribute="top" secondItem="Gxb-O4-JGm" secondAttribute="top" id="Der-fo-7lY"/>
+                                            <constraint firstItem="LIa-k3-evy" firstAttribute="leading" secondItem="Gxb-O4-JGm" secondAttribute="leading" id="I9w-NG-glC"/>
+                                            <constraint firstItem="3Zq-31-xTu" firstAttribute="top" secondItem="uPh-qd-sak" secondAttribute="bottom" constant="10" id="Lv3-Ne-A9T"/>
+                                            <constraint firstItem="uPh-qd-sak" firstAttribute="top" secondItem="JEu-kA-iRt" secondAttribute="bottom" constant="8" symbolic="YES" id="PZL-0K-pbw"/>
+                                            <constraint firstItem="vRE-1i-pH0" firstAttribute="leading" secondItem="Gxb-O4-JGm" secondAttribute="leading" constant="20" id="VW5-IA-V6K"/>
+                                            <constraint firstItem="sca-D6-hKv" firstAttribute="top" secondItem="LIa-k3-evy" secondAttribute="bottom" constant="8" symbolic="YES" id="Vm0-8g-Rpb"/>
+                                            <constraint firstItem="vRE-1i-pH0" firstAttribute="top" secondItem="3Zq-31-xTu" secondAttribute="bottom" constant="8" symbolic="YES" id="XL3-ZT-4l2"/>
+                                            <constraint firstAttribute="trailing" secondItem="ekc-m1-xxK" secondAttribute="trailing" constant="20" id="XTr-pO-7Iv"/>
+                                            <constraint firstAttribute="height" constant="850" id="Z5s-dO-0hM"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Zq-31-xTu" secondAttribute="trailing" constant="20" id="brn-ln-8dF"/>
+                                            <constraint firstAttribute="trailing" secondItem="LIa-k3-evy" secondAttribute="trailing" id="etH-Uk-wvQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Iz-ui-nki" secondAttribute="trailing" constant="20" id="jt3-hb-xN0"/>
+                                            <constraint firstItem="7Iz-ui-nki" firstAttribute="leading" secondItem="Gxb-O4-JGm" secondAttribute="leading" constant="20" id="kTl-J6-qH2"/>
+                                            <constraint firstAttribute="trailing" secondItem="sca-D6-hKv" secondAttribute="trailing" constant="20" id="mOv-CE-n2N"/>
+                                            <constraint firstItem="ekc-m1-xxK" firstAttribute="leading" secondItem="Gxb-O4-JGm" secondAttribute="leading" constant="20" id="mc2-y6-5Fi"/>
+                                            <constraint firstItem="3Zq-31-xTu" firstAttribute="height" secondItem="Gxb-O4-JGm" secondAttribute="height" multiplier="0.0715" id="oQv-TN-doi"/>
+                                            <constraint firstItem="LIa-k3-evy" firstAttribute="width" secondItem="LIa-k3-evy" secondAttribute="height" id="pSB-4c-hew"/>
+                                            <constraint firstItem="3Zq-31-xTu" firstAttribute="leading" secondItem="Gxb-O4-JGm" secondAttribute="leading" constant="20" id="pol-yp-D2m"/>
+                                            <constraint firstItem="ekc-m1-xxK" firstAttribute="top" secondItem="vRE-1i-pH0" secondAttribute="bottom" constant="8" symbolic="YES" id="ppK-4T-YSR"/>
+                                            <constraint firstItem="sca-D6-hKv" firstAttribute="leading" secondItem="Gxb-O4-JGm" secondAttribute="leading" constant="20" id="vSl-qE-PpA"/>
+                                            <constraint firstAttribute="trailing" secondItem="uPh-qd-sak" secondAttribute="trailing" constant="20" id="vpb-kW-sJD"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Gxb-O4-JGm" secondAttribute="trailing" id="DbB-wk-ylH"/>
+                                    <constraint firstItem="Gxb-O4-JGm" firstAttribute="top" secondItem="zG0-bF-bvN" secondAttribute="top" id="IaI-Sb-PA8"/>
+                                    <constraint firstItem="Gxb-O4-JGm" firstAttribute="leading" secondItem="zG0-bF-bvN" secondAttribute="leading" id="sKB-N4-jOI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gxb-O4-JGm" secondAttribute="bottom" id="teg-kK-j4M"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9np-Kp-jMZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gxb-O4-JGm" firstAttribute="width" secondItem="boc-uk-6fO" secondAttribute="width" id="3ft-yS-66Z"/>
+                            <constraint firstItem="zG0-bF-bvN" firstAttribute="top" secondItem="9np-Kp-jMZ" secondAttribute="top" id="J82-Nb-wL1"/>
+                            <constraint firstItem="9np-Kp-jMZ" firstAttribute="bottom" secondItem="zG0-bF-bvN" secondAttribute="bottom" id="iHf-Tm-qai"/>
+                            <constraint firstItem="9np-Kp-jMZ" firstAttribute="trailing" secondItem="zG0-bF-bvN" secondAttribute="trailing" id="yXM-Rx-blD"/>
+                            <constraint firstItem="zG0-bF-bvN" firstAttribute="leading" secondItem="9np-Kp-jMZ" secondAttribute="leading" id="zek-Ro-h0l"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPd-Aw-AVU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3691" y="2354"/>
+        </scene>
+        <!--Aloe Vera-->
+        <scene sceneID="O19-RN-Lbd">
+            <objects>
+                <viewController storyboardIdentifier="3" title="Aloe Vera" id="Ltz-Lr-BmO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2dF-So-APj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etB-mu-FKm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="922"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1c-RV-Kkm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deskripsi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueG-2j-hIP">
+                                                <rect key="frame" x="20" y="422" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYg-ZI-xm0">
+                                                <rect key="frame" x="20" y="451" width="374" height="43"/>
+                                                <string key="text">Lidah buaya biasanya ditanam sebagai tanaman hias dan disukai karena gel dari daunnya membuat salep kulit yang menenangkan, meski beberapa orang malah teriritasi oleh gel tersebut.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instruksi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afe-Ju-XPc">
+                                                <rect key="frame" x="20" y="509" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soW-Af-f0g">
+                                                <rect key="frame" x="20" y="538" width="374" height="72"/>
+                                                <string key="text">Karena lidah buaya membutuhkan tanah berpasir atau berkerikil, ketika ditanam di luar ruangan paling baik. Untuk memadukan lidah buaya ke dalam tanaman hias, buat pot secara terpisah dan gunakan sebagai titik fokus dalam ruangan. Menaikkan pot ke ketinggian mata akan membuatnya lebih menonjol.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7e-B8-pRF">
+                                                <rect key="frame" x="20" y="620" width="374" height="57"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cahaya Sedang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbl-xG-6AW">
+                                                        <rect key="frame" x="16" y="44" width="88" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intensistas Cahaya" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taG-NL-WNd">
+                                                        <rect key="frame" x="0.0" y="8" width="119.5" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Penyiraman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bh-q9-8J6">
+                                                        <rect key="frame" x="269" y="8" width="75" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Disiram tiap minggu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdi-Kl-EZt">
+                                                        <rect key="frame" x="250" y="44" width="113" height="15"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.96470588239999999" green="0.98823529409999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="wbl-xG-6AW" firstAttribute="centerX" secondItem="taG-NL-WNd" secondAttribute="centerX" id="0lY-d4-ebD"/>
+                                                    <constraint firstItem="7bh-q9-8J6" firstAttribute="top" secondItem="n7e-B8-pRF" secondAttribute="top" constant="8" id="7gb-0N-mIg"/>
+                                                    <constraint firstItem="wbl-xG-6AW" firstAttribute="top" secondItem="taG-NL-WNd" secondAttribute="bottom" constant="20" id="B3d-PF-KfM"/>
+                                                    <constraint firstItem="Hdi-Kl-EZt" firstAttribute="top" secondItem="7bh-q9-8J6" secondAttribute="bottom" constant="20" id="Xy1-RK-ZZC"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7bh-q9-8J6" secondAttribute="trailing" constant="30" id="g9I-Cd-tOn"/>
+                                                    <constraint firstItem="taG-NL-WNd" firstAttribute="leading" secondItem="n7e-B8-pRF" secondAttribute="leading" id="mpD-Co-34J"/>
+                                                    <constraint firstItem="Hdi-Kl-EZt" firstAttribute="centerX" secondItem="7bh-q9-8J6" secondAttribute="centerX" id="owV-sM-fSx"/>
+                                                    <constraint firstItem="taG-NL-WNd" firstAttribute="top" secondItem="n7e-B8-pRF" secondAttribute="top" constant="8" id="xiR-Zb-zq8"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masalah umum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jum-SQ-QU5">
+                                                <rect key="frame" x="20" y="685" width="374" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PP-2g-esy">
+                                                <rect key="frame" x="20" y="714" width="374" height="57.5"/>
+                                                <string key="text">Tidak banyak hama atau masalah yang mempengaruhi jaman lidah buaya. Membusuk adalah masalah paling umum dengan lidah buaya. Perhatikan layu daun dan air atau tahan air sesuai kebutuhan.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_DSC58741-476b7f7ef66d44ba8ce33cbc0d7b8dd4" translatesAutoresizingMaskIntoConstraints="NO" id="lVO-cj-Eiq">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="lVO-cj-Eiq" secondAttribute="height" id="mdJ-5U-jRt"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.98823529409999999" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="lVO-cj-Eiq" firstAttribute="width" secondItem="lVO-cj-Eiq" secondAttribute="height" id="1dU-p6-BSD"/>
+                                            <constraint firstAttribute="trailing" secondItem="n7e-B8-pRF" secondAttribute="trailing" constant="20" id="2vn-UR-pyt"/>
+                                            <constraint firstItem="cYg-ZI-xm0" firstAttribute="top" secondItem="ueG-2j-hIP" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ij-H6-3ec"/>
+                                            <constraint firstItem="lVO-cj-Eiq" firstAttribute="leading" secondItem="J1c-RV-Kkm" secondAttribute="leading" id="7jZ-di-TEv"/>
+                                            <constraint firstAttribute="trailing" secondItem="afe-Ju-XPc" secondAttribute="trailing" constant="20" id="7nd-hF-Jgx"/>
+                                            <constraint firstItem="9PP-2g-esy" firstAttribute="top" secondItem="jum-SQ-QU5" secondAttribute="bottom" constant="8" symbolic="YES" id="GiL-a8-VdM"/>
+                                            <constraint firstItem="soW-Af-f0g" firstAttribute="top" secondItem="afe-Ju-XPc" secondAttribute="bottom" constant="8" symbolic="YES" id="HET-SJ-Bzu"/>
+                                            <constraint firstAttribute="trailing" secondItem="9PP-2g-esy" secondAttribute="trailing" constant="20" id="HZk-R3-qKq"/>
+                                            <constraint firstAttribute="trailing" secondItem="jum-SQ-QU5" secondAttribute="trailing" constant="20" id="Il9-fP-lYN"/>
+                                            <constraint firstItem="n7e-B8-pRF" firstAttribute="top" secondItem="soW-Af-f0g" secondAttribute="bottom" constant="10" id="KoV-jR-0Qb"/>
+                                            <constraint firstItem="soW-Af-f0g" firstAttribute="leading" secondItem="J1c-RV-Kkm" secondAttribute="leading" constant="20" id="Le5-B4-3SY"/>
+                                            <constraint firstItem="jum-SQ-QU5" firstAttribute="top" secondItem="n7e-B8-pRF" secondAttribute="bottom" constant="8" symbolic="YES" id="Ryj-ns-YHg"/>
+                                            <constraint firstAttribute="height" constant="800" id="SFg-cY-5G6"/>
+                                            <constraint firstItem="afe-Ju-XPc" firstAttribute="leading" secondItem="J1c-RV-Kkm" secondAttribute="leading" constant="20" id="ScB-My-w2l"/>
+                                            <constraint firstItem="cYg-ZI-xm0" firstAttribute="leading" secondItem="J1c-RV-Kkm" secondAttribute="leading" constant="20" id="Wfl-DI-Day"/>
+                                            <constraint firstAttribute="trailing" secondItem="soW-Af-f0g" secondAttribute="trailing" constant="20" id="XwF-wc-WYU"/>
+                                            <constraint firstAttribute="trailing" secondItem="cYg-ZI-xm0" secondAttribute="trailing" constant="20" id="bOX-7y-iIg"/>
+                                            <constraint firstAttribute="trailing" secondItem="ueG-2j-hIP" secondAttribute="trailing" constant="20" id="e7B-yf-vpj"/>
+                                            <constraint firstItem="jum-SQ-QU5" firstAttribute="leading" secondItem="J1c-RV-Kkm" secondAttribute="leading" constant="20" id="fvD-HX-tlY"/>
+                                            <constraint firstItem="ueG-2j-hIP" firstAttribute="top" secondItem="lVO-cj-Eiq" secondAttribute="bottom" constant="8" symbolic="YES" id="mNo-jd-wvv"/>
+                                            <constraint firstItem="ueG-2j-hIP" firstAttribute="leading" secondItem="J1c-RV-Kkm" secondAttribute="leading" constant="20" id="ml4-E3-A6z"/>
+                                            <constraint firstItem="n7e-B8-pRF" firstAttribute="height" secondItem="J1c-RV-Kkm" secondAttribute="height" multiplier="0.0715" id="nlb-Xt-7ap"/>
+                                            <constraint firstItem="lVO-cj-Eiq" firstAttribute="top" secondItem="J1c-RV-Kkm" secondAttribute="top" id="uA2-ZI-Api"/>
+                                            <constraint firstItem="n7e-B8-pRF" firstAttribute="leading" secondItem="J1c-RV-Kkm" secondAttribute="leading" constant="20" id="vt0-RT-juD"/>
+                                            <constraint firstAttribute="trailing" secondItem="lVO-cj-Eiq" secondAttribute="trailing" id="x1C-Vf-hua"/>
+                                            <constraint firstItem="9PP-2g-esy" firstAttribute="leading" secondItem="J1c-RV-Kkm" secondAttribute="leading" constant="20" id="xcK-jB-HXR"/>
+                                            <constraint firstItem="afe-Ju-XPc" firstAttribute="top" secondItem="cYg-ZI-xm0" secondAttribute="bottom" constant="15" id="yNs-84-UhH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="J1c-RV-Kkm" firstAttribute="leading" secondItem="etB-mu-FKm" secondAttribute="leading" id="32G-wV-xXo"/>
+                                    <constraint firstAttribute="trailing" secondItem="J1c-RV-Kkm" secondAttribute="trailing" id="AiB-O3-cK9"/>
+                                    <constraint firstItem="J1c-RV-Kkm" firstAttribute="top" secondItem="etB-mu-FKm" secondAttribute="top" id="aK3-QB-BBr"/>
+                                    <constraint firstAttribute="bottom" secondItem="J1c-RV-Kkm" secondAttribute="bottom" id="tRb-ra-8ZA"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mfn-F0-QbS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mfn-F0-QbS" firstAttribute="bottom" secondItem="etB-mu-FKm" secondAttribute="bottom" id="C6a-2R-umk"/>
+                            <constraint firstItem="mfn-F0-QbS" firstAttribute="trailing" secondItem="etB-mu-FKm" secondAttribute="trailing" id="JBq-Zm-hMx"/>
+                            <constraint firstItem="J1c-RV-Kkm" firstAttribute="width" secondItem="2dF-So-APj" secondAttribute="width" id="RBz-lD-X8Y"/>
+                            <constraint firstItem="etB-mu-FKm" firstAttribute="top" secondItem="mfn-F0-QbS" secondAttribute="top" id="s33-z6-NcC"/>
+                            <constraint firstItem="etB-mu-FKm" firstAttribute="leading" secondItem="mfn-F0-QbS" secondAttribute="leading" id="tVb-Wa-S4N"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLm-sF-TW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5130" y="2354"/>
         </scene>
     </scenes>
     <resources>

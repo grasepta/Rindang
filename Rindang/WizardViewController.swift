@@ -16,6 +16,10 @@ class WizardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        tumbuhan.sharedInstance.plant = tumbuhan.sharedInstance.plantStock
+    }
 
     override func viewDidLoad() {
         print("lalala")
@@ -30,9 +34,7 @@ class WizardViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
+    
 
 
 }

@@ -55,9 +55,18 @@ extension ExploreViewController:UITableViewDelegate, UITableViewDataSource{
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell") as! TipTableViewCell
             return cell
-            
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            let vc = (storyboard?.instantiateViewController(withIdentifier: "2"))! as UIViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else if indexPath.row == 1{
+            let vc = (storyboard?.instantiateViewController(identifier: "01"))! as ArticleViewController
+            self.navigationController?.pushViewController(vc, animated: true)
             
         }
+        
         
     }
     
