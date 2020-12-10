@@ -8,19 +8,14 @@
 
 import UIKit
 import ARKit
-import ImageIO
 
 class ARSceneViewController: UIViewController {
-    
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var instructionLabel: UILabel!
-    var brightTemp:CGFloat = 0.5
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
-        
         setUpSceneView()
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -28,12 +23,9 @@ class ARSceneViewController: UIViewController {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
     }
-    
     var lightNodes = [SCNNode]()
     var lightEstimationSwitch = false
     var acquireNode = false
-    
-    
     var detectedHorizontalPlane = false {
         didSet {
             DispatchQueue.main.async {
@@ -43,7 +35,7 @@ class ARSceneViewController: UIViewController {
             }
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         nextButton.layer.cornerRadius = nextButton.frame.height/2
@@ -93,11 +85,9 @@ class ARSceneViewController: UIViewController {
     
     func getSphereNode(withPosition position: SCNVector3) -> SCNNode {
         let sphere = SCNSphere(radius: 0.1)
-        
         let sphereNode = SCNNode(geometry: sphere)
         sphereNode.position = position
         sphereNode.position.y += Float(sphere.radius)
-        
         return sphereNode
     }
     
@@ -106,11 +96,9 @@ class ARSceneViewController: UIViewController {
         light.type = .omni
         light.intensity = 0
         light.temperature = 0
-        
         let lightNode = SCNNode()
         lightNode.light = light
         lightNode.position = SCNVector3(0,1,0)
-        
         return lightNode
     }
     

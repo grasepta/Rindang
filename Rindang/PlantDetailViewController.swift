@@ -28,7 +28,6 @@ class PlantDetailViewController: UIViewController {
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
-        
         //Stock Plant
         var tempIntStock = 0
         for i in 0...tumbuhan.sharedInstance.plantStock.count-1 {
@@ -37,7 +36,6 @@ class PlantDetailViewController: UIViewController {
             }
         }
         print(tempIntStock)
-        
         //Garden Plant
         var tempIntGarden = 0
         if tumbuhan.sharedInstance.listKebun.count>0 {
@@ -47,25 +45,24 @@ class PlantDetailViewController: UIViewController {
                 }
             }
         }
-        
-        
         if  tumbuhan.sharedInstance.selectedPlant.status == false{
-            tumbuhan.sharedInstance.selectedPlant.status = true
-            tumbuhan.sharedInstance.listKebun.append(tumbuhan.sharedInstance.selectedPlant)
-            tumbuhan.sharedInstance.plantStock[tempIntStock].status = true
-            
+            let alert = UIAlertController(title: "Tambah", message: "Anda akan mendapatkan pemberitahuan untuk menyiram tanaman", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true){
+                tumbuhan.sharedInstance.selectedPlant.status = true
+                tumbuhan.sharedInstance.listKebun.append(tumbuhan.sharedInstance.selectedPlant)
+                tumbuhan.sharedInstance.plantStock[tempIntStock].status = true
+            }
         }else{
-            tumbuhan.sharedInstance.selectedPlant.status = false
-            tumbuhan.sharedInstance.plantStock[tempIntStock].status = false
-            tumbuhan.sharedInstance.listKebun.remove(at: tempIntGarden)
-            
+            let alert = UIAlertController(title: "Hapus", message: "Anda menonaktifkan pemberitahuan", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Tidak", style: UIAlertAction.Style.cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Ya", style: UIAlertAction.Style.default, handler: { action in
+                tumbuhan.sharedInstance.selectedPlant.status = false
+                tumbuhan.sharedInstance.plantStock[tempIntStock].status = false
+                tumbuhan.sharedInstance.listKebun.remove(at: tempIntGarden)
+                self.navigationController?.popViewController(animated: true)
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
-        
-        
-        
-        
-        
-        
-        
     }
 }

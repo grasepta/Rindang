@@ -30,8 +30,6 @@ class WizardViewController: UIViewController {
         cariButton.layer.cornerRadius = cariButton.frame.size.height/2
         cariButton.layer.borderWidth = 2
         cariButton.layer.borderColor = #colorLiteral(red: 0.262745098, green: 0.5411764706, blue: 0.368627451, alpha: 1)
-        
-        // Do any additional setup after loading the view.
     }
     
     
